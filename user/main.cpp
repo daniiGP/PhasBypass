@@ -153,14 +153,14 @@ void Run()
 {
 	il2cppi_new_console();
 	SetConsoleTextAttribute(hConsole, 12);
-	il2cppi_log_write("[DaniiGP] [PhasByP] !!! ONLY FOR !!! Server version: VR Overhaul | Hotfix v0.6.1.7");
-	il2cppi_log_write("[DaniiGP] [PhasByP] !!! ONLY FOR !!! Steam Build ID: 8629104");
+	il2cppi_log_write("[DaniiGP] [PhasByP] !!! ONLY FOR !!! Server version: Truck Overhaul | Update v0.6.2.0");
+	il2cppi_log_write("[DaniiGP] [PhasByP] !!! ONLY FOR !!! Steam Build ID: 8911777");
 	SetConsoleTextAttribute(hConsole, 14);
 	il2cppi_log_write("[DaniiGP] [PhasByP] Creating Hooks!");
 	not_melon_loader = (String*)il2cpp_string_new(NotMelonLoader.c_str());
 	DetourTransactionBegin();
 	DetourUpdateThread(GetCurrentThread());
-	DetourAttach(&(PVOID&)__400_____________10, TryGetModuleHandleHook);
+	DetourAttach(&(PVOID&)__406_____________10, TryGetModuleHandleHook);
 	DetourAttach(&(PVOID&)File_Exists, File_Exists_Hook);
 	DetourAttach(&(PVOID&)Directory_Exists, Directory_Exists_Hook);
 	DetourAttach(&(PVOID&)String_Contains, String_Contains_Hook);

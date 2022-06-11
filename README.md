@@ -6,5 +6,5 @@ Tried with BepInEx/Doorstop, AND MelonLoader !
   
   
 # Working for  
-**Server version:** VR Overhaul | Hotfix v0.6.1.7  
-**Steam Build ID:** 8629104  
+**Server version:** Truck Overhaul | Update v0.6.2.0  
+**Steam Build ID:** 8911777  
