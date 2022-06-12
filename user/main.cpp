@@ -34,7 +34,7 @@ void DoNothingMethod(MethodInfo* method)
 {
 #ifdef _DEEPDEBUG
 	SetConsoleTextAttribute(hConsole, 12);
-	il2cppi_log_write("[DaniiGP] [PhasByP] [LOG] DoNothingMethod");
+	il2cppi_log_write("[Cr4nkSt4r] [PhasByP] [LOG] DoNothingMethod");
 	SetConsoleTextAttribute(hConsole, 15);
 #endif
 }
@@ -51,7 +51,7 @@ bool File_Exists_Hook(String* str, MethodInfo* method)
 
 #ifdef _DEBUG
 	SetConsoleTextAttribute(hConsole, 12);
-	//il2cppi_log_write("[DaniiGP] [PhasByP] [LOG] File_Exists_Hook: " + skey);
+	//il2cppi_log_write("[Cr4nkSt4r] [PhasByP] [LOG] File_Exists_Hook: " + skey);
 	SetConsoleTextAttribute(hConsole, 15);
 #endif
 
@@ -70,7 +70,7 @@ bool Directory_Exists_Hook(String* str, MethodInfo* method)
 
 #ifdef _DEBUG
 	SetConsoleTextAttribute(hConsole, 12);
-	//il2cppi_log_write("[DaniiGP] [PhasByP] [LOG] Directory_Exists_Hook: " + skey);
+	//il2cppi_log_write("[Cr4nkSt4r] [PhasByP] [LOG] Directory_Exists_Hook: " + skey);
 	SetConsoleTextAttribute(hConsole, 15);
 #endif
 
@@ -100,7 +100,7 @@ bool String_Contains_Hook(String* str, String* str2, MethodInfo* method)
 
 #ifdef _DEBUG
 	SetConsoleTextAttribute(hConsole, 12);
-	//il2cppi_log_write("[DaniiGP] [PhasByP] [LOG] String_Contains_Hook: " + skey);
+	//il2cppi_log_write("[Cr4nkSt4r] [PhasByP] [LOG] String_Contains_Hook: " + skey);
 	SetConsoleTextAttribute(hConsole, 15);
 #endif
 
@@ -114,7 +114,7 @@ void* TryGetModuleHandleHook(String* str, MethodInfo* method)
 		(&((Il2CppString*)str)->chars), ((Il2CppString*)str)->length));
 	#ifdef _DEBUG
 	SetConsoleTextAttribute(hConsole, 12);
-	//il2cppi_log_write("[DaniiGP] [PhasByP] [LOG] TryGetModuleHandleHook: " + skey);
+	//il2cppi_log_write("[Cr4nkSt4r] [PhasByP] [LOG] TryGetModuleHandleHook: " + skey);
 	SetConsoleTextAttribute(hConsole, 15);
 	#endif
 
@@ -125,7 +125,7 @@ String* GetMelonLoaderSearchStrings(Byte__Array* theArray, bool b, MethodInfo* m
 {
 	#ifdef _DEBUG
 		SetConsoleTextAttribute(hConsole, 12);
-		//il2cppi_log_write("[DaniiGP] [PhasByP] [LOG] GetMelonLoaderSearchStrings");
+		//il2cppi_log_write("[Cr4nkSt4r] [PhasByP] [LOG] GetMelonLoaderSearchStrings");
 		SetConsoleTextAttribute(hConsole, 15);
 	#endif
 	return not_melon_loader;
@@ -136,7 +136,7 @@ void DebugLog(Object* message, MethodInfo* method)
 {
 	SetConsoleTextAttribute(hConsole, 12);
 	std::string str = ConvertString(Logger_GetString(message, NULL));
-	//il2cppi_log_write("[DaniiGP] [PhasByP] [DEBUG] DebugLog: " + str);
+	//il2cppi_log_write("[Cr4nkSt4r] [PhasByP] [DEBUG] DebugLog: " + str);
 	SetConsoleTextAttribute(hConsole, 15);
 }
 
@@ -144,7 +144,7 @@ void DebugLogException(Exception* exception, MethodInfo* method)
 {
 	SetConsoleTextAttribute(hConsole, 12);
 	std::string str = ConvertString(exception->fields._message);
-	il2cppi_log_write("[DaniiGP] [PhasByP] [DEBUG] DebugLogException: " + str);
+	il2cppi_log_write("[Cr4nkSt4r] [PhasByP] [DEBUG] DebugLogException: " + str);
 	SetConsoleTextAttribute(hConsole, 15);
 }
 #endif
@@ -153,10 +153,10 @@ void Run()
 {
 	il2cppi_new_console();
 	SetConsoleTextAttribute(hConsole, 12);
-	il2cppi_log_write("[DaniiGP] [PhasByP] !!! ONLY FOR !!! Server version: Truck Overhaul | Update v0.6.2.0");
-	il2cppi_log_write("[DaniiGP] [PhasByP] !!! ONLY FOR !!! Steam Build ID: 8911777");
+	il2cppi_log_write("[Cr4nkSt4r] [PhasByP] !!! ONLY FOR !!! Server version: Truck Overhaul | Update v0.6.2.0");
+	il2cppi_log_write("[Cr4nkSt4r] [PhasByP] !!! ONLY FOR !!! Steam Build ID: 8911777");
 	SetConsoleTextAttribute(hConsole, 14);
-	il2cppi_log_write("[DaniiGP] [PhasByP] Creating Hooks!");
+	il2cppi_log_write("[Cr4nkSt4r] [PhasByP] Creating Hooks!");
 	not_melon_loader = (String*)il2cpp_string_new(NotMelonLoader.c_str());
 	DetourTransactionBegin();
 	DetourUpdateThread(GetCurrentThread());
@@ -178,12 +178,12 @@ void Run()
 	if(lError != NO_ERROR)
 	{
 		SetConsoleTextAttribute(hConsole, 12);
-		il2cppi_log_write("[DaniiGP] [PhasByP] Hook creation failed!");
+		il2cppi_log_write("[Cr4nkSt4r] [PhasByP] Hook creation failed!");
 	}
 	else
 	{
 		SetConsoleTextAttribute(hConsole, 10);
-		il2cppi_log_write("[DaniiGP] [PhasByP] Hooks created!");
+		il2cppi_log_write("[Cr4nkSt4r] [PhasByP] Hooks created!");
 	}
 	SetConsoleTextAttribute(hConsole, 15);
 }
